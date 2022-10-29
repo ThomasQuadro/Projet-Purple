@@ -145,12 +145,18 @@ namespace trex
             }
         }
 
+        private void game_End()
+        {
+            
+        }
+
         /*private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }*/
 
-        
+
+
 
     }
 }
