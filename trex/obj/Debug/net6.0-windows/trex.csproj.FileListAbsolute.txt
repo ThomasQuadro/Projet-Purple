@@ -1,10 +1,28 @@
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\bin\Debug\net6.0-windows\trex.exe
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\bin\Debug\net6.0-windows\trex.deps.json
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\bin\Debug\net6.0-windows\trex.runtimeconfig.json
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\bin\Debug\net6.0-windows\trex.dll
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\bin\Debug\net6.0-windows\trex.pdb
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.csproj.AssemblyReference.cache
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.Properties.Resources.resources
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.csproj.GenerateResource.cache
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.AssemblyInfoInputs.cache
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.AssemblyInfo.cs
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.csproj.CoreCompileInputs.cache
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.dll
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\refint\trex.dll
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.pdb
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.genruntimeconfig.cache
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\ref\trex.dll
+D:\Ynov B2 Info\C sharp\Purple\testrex\trex\trex\obj\Debug\net6.0-windows\trex.game.resources
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\bin\Debug\net6.0-windows\trex.exe
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\bin\Debug\net6.0-windows\trex.deps.json
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\bin\Debug\net6.0-windows\trex.runtimeconfig.json
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\bin\Debug\net6.0-windows\trex.dll
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\bin\Debug\net6.0-windows\trex.pdb
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.csproj.AssemblyReference.cache
-D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.Form1.resources
+D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.game.resources
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.Properties.Resources.resources
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.csproj.GenerateResource.cache
 D:\Ynov B2 Info\C sharp\Purple\trex git\trex\trex\obj\Debug\net6.0-windows\trex.GeneratedMSBuildEditorConfig.editorconfig

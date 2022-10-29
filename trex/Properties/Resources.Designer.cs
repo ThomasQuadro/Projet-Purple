@@ -63,9 +63,9 @@ namespace trex.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap accroupi {
+        internal static System.Drawing.Bitmap crouch {
             get {
-                object obj = ResourceManager.GetObject("accroupi", resourceCulture);
+                object obj = ResourceManager.GetObject("crouch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,49 @@ namespace trex.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap running {
+        internal static System.Drawing.Bitmap dead {
             get {
-                object obj = ResourceManager.GetObject("running", resourceCulture);
+                object obj = ResourceManager.GetObject("dead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap obstacle_1 {
+            get {
+                object obj = ResourceManager.GetObject("obstacle-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap obstacle_2 {
+            get {
+                object obj = ResourceManager.GetObject("obstacle-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stand {
+            get {
+                object obj = ResourceManager.GetObject("stand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stand2 {
+            get {
+                object obj = ResourceManager.GetObject("stand2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
