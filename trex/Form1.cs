@@ -10,6 +10,7 @@ namespace trex
         //haut bas
         bool up = false;
         bool down = false;
+        bool dino_death = false;
 
         //vitesse et force
         int gambetta_speed;
@@ -28,6 +29,7 @@ namespace trex
         public game()
         {
             InitializeComponent();
+            game_Reset();
         }
 
         //timer
@@ -112,7 +114,10 @@ namespace trex
                     //si le dino entre en collision avec un opbstacle on arrete le jeu
                     if (dino.Bounds.IntersectsWith(obj.Bounds))
                     {
+                        dino_death = true;
+                        dino.Image = Properties.Resources.dead;
                         GameTimer.Stop();
+                        ScoreText.Text += " Pour rejouer, appuyer sur Space ou Up";
                     }
                 }
             }
@@ -132,6 +137,11 @@ namespace trex
             {
                 down = true;
             }
+            if ((e.KeyCode == Keys.Space || e.KeyCode == Keys.Up) && dino_death)
+            {
+                game_Reset();
+            }
+
         }
 
         //si on appuie pas sur une touche
@@ -147,10 +157,33 @@ namespace trex
             }
         }
 
-        //fonction de fin de jeu
-        private void game_End()
+        //fonction de reset de jeu
+        private void game_Reset()
         {
             gambetta_strenght = 12;
+            gambetta_speed = 0;
+            speed_obstacle = 10;
+
+            up = false;
+            down = false;
+            dino_death = false;
+            score = 0;
+
+            ScoreText.Text = "Score: " + score;
+            dino.Image = Properties.Resources.stand2;
+            dino.Top = 490;
+
+            foreach (Control obj in this.Controls)
+            {
+
+                if (obj is PictureBox && (string)obj.Tag == "obstacle")
+                {
+                    obj.Left = 2 * this.ClientSize.Width + 2 * r.Next(50, 250);
+                }
+            }
+
+            GameTimer.Start();
+
         }
 
         /*private void textBox1_TextChanged(object sender, EventArgs e)
