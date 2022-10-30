@@ -15,6 +15,7 @@ namespace trex
         //vitesse et force
         int gambetta_speed;
         int gambetta_strenght = 12;
+        int res = 0;
 
         //score
         int score;
@@ -37,7 +38,7 @@ namespace trex
         {
             Debug.WriteLine(gambetta_strenght);
 
-            ScoreText.Text = "Score : " + score;
+            best_Score();
 
             score++;
 
@@ -169,7 +170,7 @@ namespace trex
             dino_death = false;
             score = 0;
 
-            ScoreText.Text = "Score: " + score;
+            //ScoreText.Text = "Score: " + score;
             dino.Image = Properties.Resources.stand2;
             dino.Top = 490;
 
@@ -180,17 +181,30 @@ namespace trex
                 {
                     obj.Left = 2 * this.ClientSize.Width + 2 * r.Next(50, 250);
                 }
+                if (obstacle1.Bounds.IntersectsWith(obstacle2.Bounds))
+                {
+                    obstacle2.Left += r.Next(50, 500);
+                }
             }
 
             GameTimer.Start();
 
         }
 
-        /*private void textBox1_TextChanged(object sender, EventArgs e)
+
+        //fonction pour afficher le meilleur score
+        private void best_Score()
         {
-
-        }*/
-
+            if (score > res)
+            {
+                res = score;
+                ScoreText.Text = "Meilleurs score : " + score;
+            }
+            else
+            {
+                ScoreText.Text = "Score : " + score + " Best Score : "+res;
+            }
+        }
 
 
 
