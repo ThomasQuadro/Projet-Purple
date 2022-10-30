@@ -7,10 +7,14 @@ namespace trex
 {
     public partial class game : Form
     {
+
         //haut bas
         bool up = false;
         bool down = false;
         bool dino_death = false;
+
+        //aleatoire
+        Random r = new Random();
 
         //vitesse et force
         int gambetta_speed;
@@ -19,9 +23,6 @@ namespace trex
 
         //score
         int score;
-
-        //aleatoire
-        Random r = new Random();
 
         //vitesse obstacle
         int speed_obstacle = 10;
@@ -36,6 +37,7 @@ namespace trex
         //timer
         private void MainGameTimer(object sender, EventArgs e)
         {
+            //Debug.WriteLine(r.Next(50,150));
 
             best_Score();
 
@@ -95,7 +97,18 @@ namespace trex
                     //Si l'objet se trouve en dehors de la zone de jeu a gauche, on lui attribut une position aleatoire a droite  en dehors de la zone de jeu et on augmente le score
                     if (obj.Left < -100)
                     {
-                        obj.Left = this.ClientSize.Width + 2 * r.Next(50, 150);
+                        if (score < 400)
+                        {
+                            obj.Left = this.ClientSize.Width +r.Next(300, 500);
+                        }
+                        else if (score < 800)
+                        {
+                            obj.Left = this.ClientSize.Width + r.Next(150, 250);
+                        } else
+                        {
+                            obj.Left = this.ClientSize.Width + r.Next(100, 200);
+                        }
+                        Debug.WriteLine(obj.Left);
                     }
 
                     //si le score est un multiple de 200, on augmente la vitesse des obstacles de 1 
@@ -111,6 +124,7 @@ namespace trex
                     //si deux obstacles interagissent entre eux, on les éloignent aléatoirement
                     if (obstacle1.Bounds.IntersectsWith(obstacle2.Bounds))
                     {
+                            Debug.WriteLine(true);
                             obstacle2.Left += r.Next(100, 300);
                     }
 

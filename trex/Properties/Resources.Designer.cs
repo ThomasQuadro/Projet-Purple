@@ -63,6 +63,16 @@ namespace trex.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cactus3 {
+            get {
+                object obj = ResourceManager.GetObject("cactus3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crouch {
             get {
                 object obj = ResourceManager.GetObject("crouch", resourceCulture);
