@@ -26,7 +26,7 @@ namespace trex
         //vitesse obstacle
         int speed_obstacle = 10;
 
-        //initialisation fin
+        //initialisation/fin
         public game()
         {
             InitializeComponent();
@@ -36,7 +36,6 @@ namespace trex
         //timer
         private void MainGameTimer(object sender, EventArgs e)
         {
-            Debug.WriteLine(gambetta_strenght);
 
             best_Score();
 
@@ -96,20 +95,23 @@ namespace trex
                     //Si l'objet se trouve en dehors de la zone de jeu a gauche, on lui attribut une position aleatoire a droite  en dehors de la zone de jeu et on augmente le score
                     if (obj.Left < -100)
                     {
-                        obj.Left = 2*this.ClientSize.Width + 2*r.Next(50,250);
-                        score++;
+                        obj.Left = this.ClientSize.Width + 2 * r.Next(50, 150);
                     }
 
                     //si le score est un multiple de 200, on augmente la vitesse des obstacles de 1 
-                    if (score%200 == 0)
+                    if (speed_obstacle != 20)
                     {
-                        speed_obstacle += 1;
+                        if (score % 400 == 0)
+                        {
+                            speed_obstacle += 1;
+                        }
                     }
+                    
 
                     //si deux obstacles interagissent entre eux, on les éloignent aléatoirement
                     if (obstacle1.Bounds.IntersectsWith(obstacle2.Bounds))
                     {
-                        obstacle2.Left += r.Next(50, 500);                  
+                            obstacle2.Left += r.Next(100, 300);
                     }
 
                     //si le dino entre en collision avec un opbstacle on arrete le jeu
@@ -179,7 +181,7 @@ namespace trex
 
                 if (obj is PictureBox && (string)obj.Tag == "obstacle")
                 {
-                    obj.Left = 2 * this.ClientSize.Width + 2 * r.Next(50, 250);
+                    obj.Left = this.ClientSize.Width + 2 * r.Next(50, 250);
                 }
                 if (obstacle1.Bounds.IntersectsWith(obstacle2.Bounds))
                 {
