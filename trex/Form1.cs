@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using System.Windows.Forms;
 
 namespace trex
 {
@@ -67,7 +69,7 @@ namespace trex
             {
                 gambetta_strenght = 12;
                 gambetta_speed = 0;
-                dino.Top = 355;
+                dino.Top = 490;
 
                 //si up n'est pas appuyé et down appuyé change d'image (debout/accroupie)
                 if (!up && down)
@@ -145,9 +147,10 @@ namespace trex
             }
         }
 
+        //fonction de fin de jeu
         private void game_End()
         {
-            
+            gambetta_strenght = 12;
         }
 
         /*private void textBox1_TextChanged(object sender, EventArgs e)
