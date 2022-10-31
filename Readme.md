@@ -7,7 +7,7 @@ Lorsque le jeu se lance, des nuages defilent en fond, puis des obstacles arriven
 
 <h3>Règle de codage :</h2>
 _Chaque méthode est commentée ainsi que les variables
-_Les noms des fonctions sont comme ceci "exemple_Fonction"
+<br>_Les noms des fonctions sont comme ceci "exemple_Fonction"
 <br>_Les noms des variables sont comme ceci "exemple_variable"
 
 <h3>Langage utilisé :</h3>
