@@ -100,6 +100,7 @@ namespace trex
                         if (score < 400)
                         {
                             obj.Left = this.ClientSize.Width +r.Next(300, 500);
+                            
                         }
                         else if (score < 800)
                         {

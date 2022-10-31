@@ -36,19 +36,20 @@
             this.obstacle2 = new System.Windows.Forms.PictureBox();
             this.ScoreText = new System.Windows.Forms.Label();
             this.obstacle3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dino
             // 
             this.dino.BackColor = System.Drawing.Color.Transparent;
             this.dino.Image = global::trex.Properties.Resources.stand2;
-            this.dino.Location = new System.Drawing.Point(66, 507);
-            this.dino.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dino.Location = new System.Drawing.Point(58, 380);
             this.dino.Name = "dino";
             this.dino.Size = new System.Drawing.Size(41, 43);
             this.dino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -58,10 +59,9 @@
             // floor
             // 
             this.floor.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.floor.Location = new System.Drawing.Point(0, 533);
-            this.floor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.floor.Location = new System.Drawing.Point(0, 400);
             this.floor.Name = "floor";
-            this.floor.Size = new System.Drawing.Size(933, 80);
+            this.floor.Size = new System.Drawing.Size(816, 60);
             this.floor.TabIndex = 1;
             this.floor.TabStop = false;
             // 
@@ -74,8 +74,7 @@
             // obstacle1
             // 
             this.obstacle1.Image = global::trex.Properties.Resources.obstacle_1;
-            this.obstacle1.Location = new System.Drawing.Point(573, 487);
-            this.obstacle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.obstacle1.Location = new System.Drawing.Point(501, 365);
             this.obstacle1.Name = "obstacle1";
             this.obstacle1.Size = new System.Drawing.Size(23, 46);
             this.obstacle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -86,8 +85,7 @@
             // obstacle2
             // 
             this.obstacle2.Image = global::trex.Properties.Resources.obstacle_2;
-            this.obstacle2.Location = new System.Drawing.Point(795, 500);
-            this.obstacle2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.obstacle2.Location = new System.Drawing.Point(696, 375);
             this.obstacle2.Name = "obstacle2";
             this.obstacle2.Size = new System.Drawing.Size(32, 33);
             this.obstacle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -99,36 +97,47 @@
             // 
             this.ScoreText.AutoSize = true;
             this.ScoreText.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ScoreText.Location = new System.Drawing.Point(32, 29);
+            this.ScoreText.Location = new System.Drawing.Point(28, 22);
             this.ScoreText.Name = "ScoreText";
-            this.ScoreText.Size = new System.Drawing.Size(0, 46);
+            this.ScoreText.Size = new System.Drawing.Size(0, 37);
             this.ScoreText.TabIndex = 4;
             // 
             // obstacle3
             // 
             this.obstacle3.Image = global::trex.Properties.Resources.cactus3;
-            this.obstacle3.Location = new System.Drawing.Point(700, 484);
+            this.obstacle3.Location = new System.Drawing.Point(612, 363);
+            this.obstacle3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.obstacle3.Name = "obstacle3";
-            this.obstacle3.Size = new System.Drawing.Size(50, 50);
+            this.obstacle3.Size = new System.Drawing.Size(44, 38);
             this.obstacle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.obstacle3.TabIndex = 5;
             this.obstacle3.TabStop = false;
             this.obstacle3.Tag = "obstacle";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::trex.Properties.Resources.cloud;
+            this.pictureBox1.Location = new System.Drawing.Point(365, 287);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 597);
+            this.ClientSize = new System.Drawing.Size(800, 454);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.obstacle3);
             this.Controls.Add(this.obstacle2);
             this.Controls.Add(this.obstacle1);
             this.Controls.Add(this.ScoreText);
             this.Controls.Add(this.dino);
             this.Controls.Add(this.floor);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximumSize = new System.Drawing.Size(930, 644);
-            this.MinimumSize = new System.Drawing.Size(930, 644);
+            this.MaximumSize = new System.Drawing.Size(816, 493);
+            this.MinimumSize = new System.Drawing.Size(816, 493);
             this.Name = "game";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.game_KeyDown);
@@ -138,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.obstacle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +162,6 @@
         private PictureBox obstacle2;
         private Label ScoreText;
         private PictureBox obstacle3;
+        private PictureBox pictureBox1;
     }
 }
