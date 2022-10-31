@@ -36,13 +36,17 @@
             this.obstacle2 = new System.Windows.Forms.PictureBox();
             this.ScoreText = new System.Windows.Forms.Label();
             this.obstacle3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cloud2 = new System.Windows.Forms.PictureBox();
+            this.cloud1 = new System.Windows.Forms.PictureBox();
+            this.cloud3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud3)).BeginInit();
             this.SuspendLayout();
             // 
             // dino
@@ -105,7 +109,7 @@
             // obstacle3
             // 
             this.obstacle3.Image = global::trex.Properties.Resources.cactus3;
-            this.obstacle3.Location = new System.Drawing.Point(612, 363);
+            this.obstacle3.Location = new System.Drawing.Point(612, 362);
             this.obstacle3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.obstacle3.Name = "obstacle3";
             this.obstacle3.Size = new System.Drawing.Size(44, 38);
@@ -114,28 +118,53 @@
             this.obstacle3.TabStop = false;
             this.obstacle3.Tag = "obstacle";
             // 
-            // pictureBox1
+            // cloud2
             // 
-            this.pictureBox1.Image = global::trex.Properties.Resources.cloud;
-            this.pictureBox1.Location = new System.Drawing.Point(365, 287);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.cloud2.Image = global::trex.Properties.Resources.cloud;
+            this.cloud2.Location = new System.Drawing.Point(370, 287);
+            this.cloud2.Name = "cloud2";
+            this.cloud2.Size = new System.Drawing.Size(84, 28);
+            this.cloud2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cloud2.TabIndex = 6;
+            this.cloud2.TabStop = false;
+            this.cloud2.Tag = "clouds";
+            // 
+            // cloud1
+            // 
+            this.cloud1.Image = global::trex.Properties.Resources.cloud;
+            this.cloud1.Location = new System.Drawing.Point(234, 287);
+            this.cloud1.Name = "cloud1";
+            this.cloud1.Size = new System.Drawing.Size(84, 28);
+            this.cloud1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cloud1.TabIndex = 7;
+            this.cloud1.TabStop = false;
+            this.cloud1.Tag = "clouds";
+            // 
+            // cloud3
+            // 
+            this.cloud3.Image = global::trex.Properties.Resources.cloud;
+            this.cloud3.Location = new System.Drawing.Point(501, 287);
+            this.cloud3.Name = "cloud3";
+            this.cloud3.Size = new System.Drawing.Size(84, 28);
+            this.cloud3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cloud3.TabIndex = 8;
+            this.cloud3.TabStop = false;
+            this.cloud3.Tag = "clouds";
             // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dino);
             this.Controls.Add(this.obstacle3);
             this.Controls.Add(this.obstacle2);
             this.Controls.Add(this.obstacle1);
             this.Controls.Add(this.ScoreText);
-            this.Controls.Add(this.dino);
             this.Controls.Add(this.floor);
+            this.Controls.Add(this.cloud1);
+            this.Controls.Add(this.cloud2);
+            this.Controls.Add(this.cloud3);
             this.MaximumSize = new System.Drawing.Size(816, 493);
             this.MinimumSize = new System.Drawing.Size(816, 493);
             this.Name = "game";
@@ -147,7 +176,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.obstacle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cloud3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +193,8 @@
         private PictureBox obstacle2;
         private Label ScoreText;
         private PictureBox obstacle3;
-        private PictureBox pictureBox1;
+        private PictureBox cloud2;
+        private PictureBox cloud1;
+        private PictureBox cloud3;
     }
 }

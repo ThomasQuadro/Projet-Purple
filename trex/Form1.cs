@@ -8,6 +8,10 @@ namespace trex
     public partial class game : Form
     {
 
+        int positionx = 0;
+        int positiony = 0;
+        int speed_cloud = 5;
+
         //haut bas
         bool up = false;
         bool down = false;
@@ -86,9 +90,27 @@ namespace trex
                 }
             }
 
+
+            
+
             //Pour chaque objets de type controle present dans la zone de controle
             foreach (Control obj in this.Controls)
             {
+                if (obj is PictureBox && (string) obj.Tag == "clouds")
+                {
+                    obj.Left -= speed_cloud;
+                    if(obj.Left < -50)
+                    {
+                        positionx = this.ClientSize.Width;
+                        positiony = r.Next(375,425) ;
+                        obj.Left = positionx;
+                        obj.Top = positiony;
+                    }
+                    
+                }
+
+
+
                 //si l'objet est une image et que son tag est obstacle, on lui attribue une vitesse
                 if (obj is PictureBox && (string) obj.Tag == "obstacle")
                 {
