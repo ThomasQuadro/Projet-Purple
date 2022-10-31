@@ -39,6 +39,7 @@
             this.cloud2 = new System.Windows.Forms.PictureBox();
             this.cloud1 = new System.Windows.Forms.PictureBox();
             this.cloud3 = new System.Windows.Forms.PictureBox();
+            this.ptero1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obstacle1)).BeginInit();
@@ -47,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cloud2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloud1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloud3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptero1)).BeginInit();
             this.SuspendLayout();
             // 
             // dino
@@ -152,11 +154,24 @@
             this.cloud3.TabStop = false;
             this.cloud3.Tag = "clouds";
             // 
+            // ptero1
+            // 
+            this.ptero1.Image = global::trex.Properties.Resources.ptero;
+            this.ptero1.Location = new System.Drawing.Point(738, 362);
+            this.ptero1.Name = "ptero1";
+            this.ptero1.Size = new System.Drawing.Size(50, 25);
+            this.ptero1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptero1.TabIndex = 9;
+            this.ptero1.TabStop = false;
+            this.ptero1.Tag = "obstacle";
+            this.ptero1.Visible = false;
+            // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
+            this.Controls.Add(this.ptero1);
             this.Controls.Add(this.obstacle2);
             this.Controls.Add(this.obstacle3);
             this.Controls.Add(this.obstacle1);
@@ -180,6 +195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cloud2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloud1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloud3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptero1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +213,6 @@
         private PictureBox cloud2;
         private PictureBox cloud1;
         private PictureBox cloud3;
+        private PictureBox ptero1;
     }
 }

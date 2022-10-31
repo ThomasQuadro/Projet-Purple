@@ -43,8 +43,7 @@ namespace trex
         //timer
         private void MainGameTimer(object sender, EventArgs e)
         {
-            //Debug.WriteLine(r.Next(50,150));
-
+            //appel de la fonction best_Score
             best_Score();
 
             score++;
@@ -79,7 +78,7 @@ namespace trex
             {
                 gambetta_strenght = 12;
                 gambetta_speed = 0;
-                dino.Top = 489;
+                dino.Top = 490;
 
                 //si up n'est pas appuyé et down appuyé change d'image (debout/accroupie)
                 if (!up && down)
@@ -108,10 +107,8 @@ namespace trex
                     }
                 }
 
-
-
                 //si l'objet est une image et que son tag est obstacle, on lui attribue une vitesse
-                if (obj is PictureBox && (string) obj.Tag == "obstacle")
+                if (obj is PictureBox && (string) obj.Tag == "obstacle" && obj.Visible == true)
                 {
                     obj.Left -= speed_obstacle;
 
@@ -121,20 +118,27 @@ namespace trex
                         if (score < 400)
                         {
                             obj.Left = this.ClientSize.Width;
-                            obj.Left += r.Next(300, 500);
+                            obj.Left += r.Next(500, 600);
+
                         }
                         else if (score < 800)
                         {
                             obstacle3.Visible = true;
-                            obj.Left = this.ClientSize.Width + r.Next(150, 250);
-                            obj.Left += r.Next(250, 350);
+                            obj.Left = this.ClientSize.Width ;
+                            obj.Left += r.Next(400, 500);
 
                         } else
                         {
-                            obj.Left = this.ClientSize.Width + r.Next(100, 200);
-                            obj.Left += r.Next(100, 200);
+                            if (obstacle3.Left < -50)
+                            {
+                                obstacle3.Visible = false;
+                            }
+                            ptero1.Visible = true;
+                            ptero1.Top = r.Next(400, 460);
+                            obj.Left = this.ClientSize.Width ;
+                            obj.Left += r.Next(300, 400);
+                            
                         }
-                        Debug.WriteLine(obj.Left);
                     }
 
                     //si le score est un multiple de 200, on augmente la vitesse des obstacles de 1 
@@ -211,9 +215,10 @@ namespace trex
             dino_death = false;
             score = 0;
 
-            //ScoreText.Text = "Score: " + score;
             dino.Image = Properties.Resources.stand2;
             dino.Top = 490;
+
+            
 
             foreach (Control obj in this.Controls)
             {
@@ -224,14 +229,16 @@ namespace trex
                 if (obj.Tag == "clouds")
                 {
                     obj.Top = r.Next(375, 425);
-
                 }
                 
 
                 if (obj is PictureBox && (string)obj.Tag == "obstacle")
                 {
-                    obj.Left = this.ClientSize.Width ;
+                    obj.Left = this.ClientSize.Width;
+                    obstacle2.Left += r.Next(200, 300);
                     obstacle3.Visible = false;
+                    ptero1.Visible = false;
+                    ptero1.Top = r.Next(400, 460);
                 }
                 
             }
