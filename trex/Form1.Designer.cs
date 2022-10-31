@@ -117,6 +117,7 @@
             this.obstacle3.TabIndex = 5;
             this.obstacle3.TabStop = false;
             this.obstacle3.Tag = "obstacle";
+            this.obstacle3.Visible = false;
             // 
             // cloud2
             // 
@@ -156,10 +157,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 454);
-            this.Controls.Add(this.dino);
-            this.Controls.Add(this.obstacle3);
             this.Controls.Add(this.obstacle2);
+            this.Controls.Add(this.obstacle3);
             this.Controls.Add(this.obstacle1);
+            this.Controls.Add(this.dino);
             this.Controls.Add(this.ScoreText);
             this.Controls.Add(this.floor);
             this.Controls.Add(this.cloud1);

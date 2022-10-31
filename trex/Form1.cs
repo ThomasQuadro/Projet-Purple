@@ -7,7 +7,7 @@ namespace trex
 {
     public partial class game : Form
     {
-
+        //vitesse nuage et position nuage en x et y
         int positionx = 0;
         int positiony = 0;
         int speed_cloud = 5;
@@ -23,6 +23,8 @@ namespace trex
         //vitesse et force
         int gambetta_speed;
         int gambetta_strenght = 12;
+
+        //score le plus élevé
         int res = 0;
 
         //score
@@ -77,7 +79,7 @@ namespace trex
             {
                 gambetta_strenght = 12;
                 gambetta_speed = 0;
-                dino.Top = 490;
+                dino.Top = 489;
 
                 //si up n'est pas appuyé et down appuyé change d'image (debout/accroupie)
                 if (!up && down)
@@ -90,12 +92,10 @@ namespace trex
                 }
             }
 
-
-            
-
             //Pour chaque objets de type controle present dans la zone de controle
             foreach (Control obj in this.Controls)
             {
+                //si c'est un nuage, attribue une vitesse aux nuages et met une position aleatoire aux nuages
                 if (obj is PictureBox && (string) obj.Tag == "clouds")
                 {
                     obj.Left -= speed_cloud;
@@ -106,7 +106,6 @@ namespace trex
                         obj.Left = positionx;
                         obj.Top = positiony;
                     }
-                    
                 }
 
 
@@ -117,19 +116,23 @@ namespace trex
                     obj.Left -= speed_obstacle;
 
                     //Si l'objet se trouve en dehors de la zone de jeu a gauche, on lui attribut une position aleatoire a droite  en dehors de la zone de jeu et on augmente le score
-                    if (obj.Left < -100)
+                    if (obj.Left < -50)
                     {
                         if (score < 400)
                         {
-                            obj.Left = this.ClientSize.Width +r.Next(300, 500);
-                            
+                            obj.Left = this.ClientSize.Width;
+                            obj.Left += r.Next(300, 500);
                         }
                         else if (score < 800)
                         {
+                            obstacle3.Visible = true;
                             obj.Left = this.ClientSize.Width + r.Next(150, 250);
+                            obj.Left += r.Next(250, 350);
+
                         } else
                         {
                             obj.Left = this.ClientSize.Width + r.Next(100, 200);
+                            obj.Left += r.Next(100, 200);
                         }
                         Debug.WriteLine(obj.Left);
                     }
@@ -152,7 +155,7 @@ namespace trex
                     }
 
                     //si le dino entre en collision avec un opbstacle on arrete le jeu
-                    if (dino.Bounds.IntersectsWith(obj.Bounds))
+                    if (dino.Bounds.IntersectsWith(obj.Bounds) && obj.Visible == true)
                     {
                         dino_death = true;
                         dino.Image = Properties.Resources.dead;
@@ -161,7 +164,6 @@ namespace trex
                     }
                 }
             }
-
 
         }
 
@@ -215,15 +217,23 @@ namespace trex
 
             foreach (Control obj in this.Controls)
             {
+                cloud1.Left = this.ClientSize.Width + 100;
+                cloud2.Left = cloud1.Left + r.Next(200,250);
+                cloud3.Left = cloud2.Left + r.Next(200, 250);
+
+                if (obj.Tag == "clouds")
+                {
+                    obj.Top = r.Next(375, 425);
+
+                }
+                
 
                 if (obj is PictureBox && (string)obj.Tag == "obstacle")
                 {
-                    obj.Left = this.ClientSize.Width + 2 * r.Next(50, 250);
+                    obj.Left = this.ClientSize.Width ;
+                    obstacle3.Visible = false;
                 }
-                if (obstacle1.Bounds.IntersectsWith(obstacle2.Bounds))
-                {
-                    obstacle2.Left += r.Next(50, 500);
-                }
+                
             }
 
             GameTimer.Start();
@@ -244,8 +254,6 @@ namespace trex
                 ScoreText.Text = "Score : " + score + " Best Score : "+res;
             }
         }
-
-
 
     }
 }
